@@ -1,4 +1,5 @@
 CC = g++
+# CC = g++-10.1
 CFLAGS = -lm -pthread -Ofast -march=native -Wall -funroll-loops -Wno-unused-result -lgsl -lm -lgslcblas
 LFLAGS = -lgsl -lm -lgslcblas
 INCLUDES = -I/usr/local/include -Ieigen-3.3.3
@@ -9,9 +10,9 @@ BIN = bin/esim bin/search
 all: eigen-3.3.3 bin $(BIN)
 
 eigen-3.3.3:
-	curl https://bitbucket.org/eigen/eigen/get/3.3.3.tar.bz2  --output eigen-3.3.3.tar.gz
+# 	curl https://bitbucket.org/eigen/eigen/get/3.3.3.tar.bz2  --output eigen-3.3.3.tar.gz
 	tar -xf eigen-3.3.3.tar.gz
-	mv eigen-eigen-67e894c6cd8f eigen-3.3.3
+	mv eigen-3.3.7 eigen-3.3.3
 
 bin:
 	mkdir bin
