@@ -1,9 +1,9 @@
 #!/bin/bash
 
-node_file="dblp_data/node.dat"
-link_file="dblp_data/link.dat"
-path_file="dblp_data/path.dat"
-output_file="results/vec.dat"
+node_file="books/node.dat"
+link_file="books/link.dat"
+path_file="books/path.dat"
+output_file="results/books/vec.dat"
 
 if [ ${node_file} == "dblp_data/node.dat" ] && [ ! -e dblp_data/node.dat ]; then
     echo ${green}===Downloading DBLP Dataset===${reset}
